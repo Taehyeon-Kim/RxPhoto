@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Feature
+import Presentation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = DemoViewController()
+        window?.rootViewController = ImageSearchViewController()
         window?.makeKeyAndVisible()
     }
 }
