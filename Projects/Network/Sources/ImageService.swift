@@ -12,11 +12,11 @@ import Alamofire
 
 public class ImageService {
     
-    typealias CompletionHandler = (SearchPhotoDTO?, Int?, Error?) -> Void
+    public typealias CompletionHandler = (SearchPhotoDTO?, Int?, Error?) -> Void
     
     private init() {}
     
-    static func searchPhoto(query: String, completion: @escaping CompletionHandler) {
+    public static func searchPhoto(query: String, completion: @escaping CompletionHandler) {
         let url = "\(APIKey.searchURL)\(query)"
         let header: HTTPHeaders = ["Authorization": APIKey.authorization]
         
