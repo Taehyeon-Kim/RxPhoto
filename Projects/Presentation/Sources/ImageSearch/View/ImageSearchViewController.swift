@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class ImageSearchViewController: UIViewController {
+public class ImageSearchViewController: UIViewController {
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
