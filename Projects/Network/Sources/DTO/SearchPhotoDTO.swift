@@ -10,8 +10,8 @@ import Foundation
 
 public struct SearchPhotoDTO: Codable, Hashable {
      
-    let total, totalPages: Int
-    let results: [SearchResult]
+    public let total, totalPages: Int
+    public let results: [SearchResult]
     
     enum CodingKeys: String, CodingKey {
         case total
@@ -23,9 +23,9 @@ public struct SearchPhotoDTO: Codable, Hashable {
 // MARK: - Result
 public struct SearchResult: Codable, Hashable {
      
-    let id: String
-    let urls: Urls
-    let likes: Int
+    public let id: String
+    public let urls: Urls
+    public let likes: Int
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -34,8 +34,8 @@ public struct SearchResult: Codable, Hashable {
 }
 
 public struct Urls: Codable, Hashable {
-    let raw, full, regular, small: String
-    let thumb, smallS3: String
+    public let raw, full, regular, small: String
+    public let thumb, smallS3: String
 
     enum CodingKeys: String, CodingKey {
         case raw, full, regular, small, thumb
@@ -46,7 +46,7 @@ public struct Urls: Codable, Hashable {
 public extension SearchPhotoDTO {
     
     static func empty() -> Self {
-        return SearchPhotoDTO(total: 0, totalPages: 0, results: [])
+        SearchPhotoDTO(total: 0, totalPages: 0, results: [])
     }
 }
 
