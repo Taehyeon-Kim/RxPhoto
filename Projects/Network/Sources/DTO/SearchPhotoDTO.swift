@@ -43,3 +43,10 @@ public struct Urls: Codable, Hashable {
     }
 }
 
+public extension SearchPhotoDTO {
+    
+    static func empty() -> Self {
+        return SearchPhotoDTO(total: 0, totalPages: 0, results: [])
+    }
+}
+
