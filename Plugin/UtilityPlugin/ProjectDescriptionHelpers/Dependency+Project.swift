@@ -15,7 +15,7 @@ extension TargetDependency {
 }
 
 public extension TargetDependency.Project {
-    static let Feature = TargetDependency.project(target: "Feature", path: .relativeToRoot("Projects/Feature"))
+    static let Presentation = TargetDependency.project(target: "Presentation", path: .relativeToRoot("Projects/Presentation"))
 }
 
 public extension TargetDependency.Project.Module {
