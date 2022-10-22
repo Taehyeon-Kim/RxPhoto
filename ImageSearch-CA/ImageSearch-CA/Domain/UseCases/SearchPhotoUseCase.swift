@@ -12,8 +12,8 @@ import Combine
 protocol SearchPhotoUseCase {
     func execute(
         with requestValue: SearchPhotoUseCaseRequestValue,
-        completion: @escaping (Result<Photo, Error>) -> Void
-    ) -> Cancellable?
+        completion: @escaping (Result<[Photo], Error>) -> Void
+    )
 }
 
 struct SearchPhotoUseCaseRequestValue {
@@ -23,17 +23,24 @@ struct SearchPhotoUseCaseRequestValue {
 
 final class SearchPhotoUseCaseImpl: SearchPhotoUseCase {
     /// 사진 검색을 수행하는 레포지터리
-    // private let photoRepository: PhotoRepository
+    private let photoRepository: PhotoRepository
     
-    init() {
-        
+    init(
+        photoRepository: PhotoRepository
+    ) {
+        self.photoRepository = photoRepository
     }
     
     func execute(
         with requestValue: SearchPhotoUseCaseRequestValue,
-        completion: @escaping (Result<Photo, Error>) -> Void)
-    -> Cancellable? {
+        completion: @escaping (Result<[Photo], Error>) -> Void
+    ) {
         // 레포지터리의 search or fetch 해오는 기능 호출로 역할 위임
-        return nil
+        return photoRepository.fetchPhotoList(
+            query: requestValue.query,
+            page: requestValue.page
+        ) { result in
+            completion(result)
+        }
     }
 }
