@@ -10,7 +10,7 @@ import Foundation
 struct PhotoResponseDTO: Codable {
     let total, totalPages: Int
     let results: [PhotoDTO]
-    
+
     private enum CodingKeys: String, CodingKey {
         case total
         case totalPages = "total_pages"
@@ -23,11 +23,15 @@ extension PhotoResponseDTO {
     struct PhotoDTO: Codable {
         let id: String
         let likes: Int
-        let description: String
+        let description: String?
         let user: User
         let urls: Urls
+        
+        private enum CodingKeys: String, CodingKey {
+            case id, likes, description, user, urls
+        }
     }
-    
+
     struct Urls: Codable {
         let raw, full, regular, small: String
         let thumb, smallS3: String
@@ -37,10 +41,14 @@ extension PhotoResponseDTO {
             case smallS3 = "small_s3"
         }
     }
-    
+
     struct User: Codable {
         let username: String
         let name: String
+        
+        private enum CodingKeys: String, CodingKey {
+            case username, name
+        }
     }
 }
 
@@ -50,7 +58,7 @@ extension PhotoResponseDTO.PhotoDTO {
     func toDomain() -> Photo {
         return Photo(
             id: id,
-            desc: description,
+            desc: description?.description ?? "No Description",
             author: user.username,
             imagePath: urls.small
         )
