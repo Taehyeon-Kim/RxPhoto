@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import Combine
+
+protocol UseCase {
+    @discardableResult
+    func start() -> Cancellable?
+}
