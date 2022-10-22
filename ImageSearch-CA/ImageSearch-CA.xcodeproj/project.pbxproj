@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD2B16682904085F009A67BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16672904085F009A67BB /* AppDelegate.swift */; };
+		BD2B166A2904085F009A67BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16692904085F009A67BB /* SceneDelegate.swift */; };
+		BD2B167129040861009A67BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2B167029040861009A67BB /* Assets.xcassets */; };
+		BD2B167429040861009A67BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2B167229040861009A67BB /* LaunchScreen.storyboard */; };
+		BD2B168529040900009A67BB /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168429040900009A67BB /* ImageSearchViewController.swift */; };
+		BD2B168C29040A05009A67BB /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168B29040A05009A67BB /* Environment.swift */; };
+		BD2B168E29040A20009A67BB /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168D29040A20009A67BB /* UseCase.swift */; };
+		BD2B169029040A31009A67BB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168F29040A31009A67BB /* Photo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD2B16642904085F009A67BB /* ImageSearch-CA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ImageSearch-CA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2B16672904085F009A67BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD2B16692904085F009A67BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD2B167029040861009A67BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD2B167329040861009A67BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD2B167529040861009A67BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD2B168429040900009A67BB /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		BD2B168B29040A05009A67BB /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BD2B168D29040A20009A67BB /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		BD2B168F29040A31009A67BB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BD2B169129040A3B009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		BD2B169329040A45009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		BD2B169529040A4E009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		BD2B169B29040A98009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		BD2B169D29040A9F009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		BD2B169F29040AA7009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD2B16612904085F009A67BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD2B165B2904085F009A67BB = {
+			isa = PBXGroup;
+			children = (
+				BD2B16662904085F009A67BB /* ImageSearch-CA */,
+				BD2B16652904085F009A67BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD2B16652904085F009A67BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B16642904085F009A67BB /* ImageSearch-CA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD2B16662904085F009A67BB /* ImageSearch-CA */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B167B2904088F009A67BB /* App */,
+				BD2B167D290408A5009A67BB /* Data */,
+				BD2B167E290408A8009A67BB /* Domain */,
+				BD2B1680290408AE009A67BB /* Network */,
+				BD2B167F290408AA009A67BB /* Presentation */,
+				BD2B1681290408D3009A67BB /* Resource */,
+				BD2B169729040A75009A67BB /* Utils */,
+			);
+			path = "ImageSearch-CA";
+			sourceTree = "<group>";
+		};
+		BD2B167B2904088F009A67BB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B1682290408DD009A67BB /* Support */,
+				BD2B167C29040897009A67BB /* Application */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BD2B167C29040897009A67BB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B16672904085F009A67BB /* AppDelegate.swift */,
+				BD2B16692904085F009A67BB /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BD2B167D290408A5009A67BB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B1686290409AB009A67BB /* Network */,
+				BD2B1687290409AE009A67BB /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BD2B167E290408A8009A67BB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B168A290409C7009A67BB /* Entities */,
+				BD2B1689290409BB009A67BB /* Repositories */,
+				BD2B1688290409B8009A67BB /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BD2B167F290408AA009A67BB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B1683290408EC009A67BB /* ImageSearch */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BD2B1680290408AE009A67BB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B168B29040A05009A67BB /* Environment.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BD2B1681290408D3009A67BB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B167029040861009A67BB /* Assets.xcassets */,
+				BD2B167229040861009A67BB /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BD2B1682290408DD009A67BB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B167529040861009A67BB /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		BD2B1683290408EC009A67BB /* ImageSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B168429040900009A67BB /* ImageSearchViewController.swift */,
+			);
+			path = ImageSearch;
+			sourceTree = "<group>";
+		};
+		BD2B1686290409AB009A67BB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169529040A4E009A67BB /* .gitkeep */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BD2B1687290409AE009A67BB /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169329040A45009A67BB /* .gitkeep */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BD2B1688290409B8009A67BB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B168D29040A20009A67BB /* UseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		BD2B1689290409BB009A67BB /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169129040A3B009A67BB /* .gitkeep */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BD2B168A290409C7009A67BB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B168F29040A31009A67BB /* Photo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BD2B169729040A75009A67BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169A29040A90009A67BB /* Enums */,
+				BD2B169829040A89009A67BB /* Extensions */,
+				BD2B169929040A8D009A67BB /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BD2B169829040A89009A67BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169F29040AA7009A67BB /* .gitkeep */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD2B169929040A8D009A67BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169D29040A9F009A67BB /* .gitkeep */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BD2B169A29040A90009A67BB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B169B29040A98009A67BB /* .gitkeep */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD2B16632904085F009A67BB /* ImageSearch-CA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD2B167829040861009A67BB /* Build configuration list for PBXNativeTarget "ImageSearch-CA" */;
+			buildPhases = (
+				BD2B16602904085F009A67BB /* Sources */,
+				BD2B16612904085F009A67BB /* Frameworks */,
+				BD2B16622904085F009A67BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ImageSearch-CA";
+			productName = "ImageSearch-CA";
+			productReference = BD2B16642904085F009A67BB /* ImageSearch-CA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD2B165C2904085F009A67BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					BD2B16632904085F009A67BB = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = BD2B165F2904085F009A67BB /* Build configuration list for PBXProject "ImageSearch-CA" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD2B165B2904085F009A67BB;
+			productRefGroup = BD2B16652904085F009A67BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD2B16632904085F009A67BB /* ImageSearch-CA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD2B16622904085F009A67BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2B167429040861009A67BB /* LaunchScreen.storyboard in Resources */,
+				BD2B167129040861009A67BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD2B16602904085F009A67BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2B169029040A31009A67BB /* Photo.swift in Sources */,
+				BD2B168E29040A20009A67BB /* UseCase.swift in Sources */,
+				BD2B16682904085F009A67BB /* AppDelegate.swift in Sources */,
+				BD2B168C29040A05009A67BB /* Environment.swift in Sources */,
+				BD2B166A2904085F009A67BB /* SceneDelegate.swift in Sources */,
+				BD2B168529040900009A67BB /* ImageSearchViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD2B167229040861009A67BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD2B167329040861009A67BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD2B167629040861009A67BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD2B167729040861009A67BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD2B167929040861009A67BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ImageSearch-CA/App/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taekki.ImageSearch-CA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BD2B167A29040861009A67BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ImageSearch-CA/App/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taekki.ImageSearch-CA";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD2B165F2904085F009A67BB /* Build configuration list for PBXProject "ImageSearch-CA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD2B167629040861009A67BB /* Debug */,
+				BD2B167729040861009A67BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD2B167829040861009A67BB /* Build configuration list for PBXNativeTarget "ImageSearch-CA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD2B167929040861009A67BB /* Debug */,
+				BD2B167A29040861009A67BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD2B165C2904085F009A67BB /* Project object */;
+}
