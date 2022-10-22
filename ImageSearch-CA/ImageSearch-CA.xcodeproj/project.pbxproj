@@ -19,6 +19,7 @@
 		BD2B16A629040CB9009A67BB /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A529040CB9009A67BB /* Then */; };
 		BD2B16A929040CDA009A67BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A829040CDA009A67BB /* Kingfisher */; };
 		BD2B16AC29040D3A009A67BB /* ReusableKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16AB29040D3A009A67BB /* ReusableKit */; };
+		BD2B16AF290411C1009A67BB /* PhotoResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16AE290411C1009A67BB /* PhotoResponseDTO+Mapping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BD2B169B29040A98009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD2B169D29040A9F009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD2B169F29040AA7009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		BD2B16AE290411C1009A67BB /* PhotoResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		BD2B1686290409AB009A67BB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BD2B16AD290411AD009A67BB /* DataMapping */,
 				BD2B169529040A4E009A67BB /* .gitkeep */,
 			);
 			path = Network;
@@ -235,6 +238,14 @@
 				BD2B169B29040A98009A67BB /* .gitkeep */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		BD2B16AD290411AD009A67BB /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B16AE290411C1009A67BB /* PhotoResponseDTO+Mapping.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +336,7 @@
 				BD2B168C29040A05009A67BB /* Environment.swift in Sources */,
 				BD2B166A2904085F009A67BB /* SceneDelegate.swift in Sources */,
 				BD2B168529040900009A67BB /* ImageSearchViewController.swift in Sources */,
+				BD2B16AF290411C1009A67BB /* PhotoResponseDTO+Mapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
