@@ -6,9 +6,8 @@
 //
 
 import UIKit
+import Combine
 
-import Kingfisher
-import RxSwift
 import SnapKit
 import Then
 
@@ -21,10 +20,9 @@ final class SearchPhotoViewController: UIViewController {
     )
     
     private var dataSource: UICollectionViewDiffableDataSource<Int, Photo>!
-    
-    private let disposeBag = DisposeBag()
+    private var cancellable = Set<AnyCancellable>()
     private let viewModel: SearchPhotoViewModel
-    
+
     init(viewModel: SearchPhotoViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -60,12 +58,19 @@ final class SearchPhotoViewController: UIViewController {
     }
     
     private func bind() {
-        viewModel.items.subscribe { photo in
+        viewModel.$combineItems.sink { [weak self] photos in
             var snapshot = NSDiffableDataSourceSnapshot<Int, Photo>()
             snapshot.appendSections([0])
-            snapshot.appendItems(photo)
-            self.dataSource.apply(snapshot)
-        }.disposed(by: disposeBag)
+            snapshot.appendItems(photos)
+            self?.dataSource.apply(snapshot)
+        }.store(in: &cancellable)
+        
+        // viewModel.items.subscribe { photo in
+        //     var snapshot = NSDiffableDataSourceSnapshot<Int, Photo>()
+        //     snapshot.appendSections([0])
+        //     snapshot.appendItems(photo)
+        //     self.dataSource.apply(snapshot)
+        // }.disposed(by: disposeBag)
     }
 }
 

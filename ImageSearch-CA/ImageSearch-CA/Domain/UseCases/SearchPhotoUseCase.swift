@@ -10,10 +10,7 @@ import Combine
 
 // 동작에 대한 정의를 먼저 진행한다. 우리는 이를 추상화라고 한다.
 protocol SearchPhotoUseCase {
-    func execute(
-        with requestValue: SearchPhotoUseCaseRequestValue,
-        completion: @escaping (Result<[Photo], Error>) -> Void
-    )
+    func execute(with requestValue: SearchPhotoUseCaseRequestValue) -> AnyPublisher<PhotoResponseDTO, Error>
 }
 
 struct SearchPhotoUseCaseRequestValue {
@@ -32,15 +29,12 @@ final class SearchPhotoUseCaseImpl: SearchPhotoUseCase {
     }
     
     func execute(
-        with requestValue: SearchPhotoUseCaseRequestValue,
-        completion: @escaping (Result<[Photo], Error>) -> Void
-    ) {
+        with requestValue: SearchPhotoUseCaseRequestValue
+    ) -> AnyPublisher<PhotoResponseDTO, Error> {
         // 레포지터리의 search or fetch 해오는 기능 호출로 역할 위임
         return photoRepository.fetchPhotoList(
             query: requestValue.query,
             page: requestValue.page
-        ) { result in
-            completion(result)
-        }
+        )
     }
 }

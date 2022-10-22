@@ -8,32 +8,21 @@
 import Foundation
 import Combine
 
-import Alamofire
-
 final class PhotoRepositoryImpl: PhotoRepository {
     func fetchPhotoList(
         query: String,
-        page: Int,
-        completion: @escaping (Result<[Photo], Error>) -> Void
-    ) {
+        page: Int
+    ) -> AnyPublisher<PhotoResponseDTO, Error> {
 
-        let url = "\(APIKey.searchURL)\(query)"
-        let header: HTTPHeaders = ["Authorization": APIKey.authorization]
+        let urlPath = "\(APIKey.searchURL)\(query)"
+        let headers: HTTPHeaders = ["Authorization": APIKey.authorization]
         
-        AF.request(
-            url,
-            method: .get,
-            headers: header
-        ).responseDecodable(of: PhotoResponseDTO.self) { response in
-
-            switch response.result {
-            case let .success(data):
-                let photos = data.results.map { $0.toDomain() }
-                completion(.success(photos))
-            
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
+        var urlRequest = URLRequest(url: URL(string: urlPath)!)
+        urlRequest.headers = headers
+        
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
+            .map(\.data)
+            .decode(type: PhotoResponseDTO.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 }

@@ -6,16 +6,14 @@
 //
 
 import Foundation
-
-import RxSwift
-import RxRelay
+import Combine
 
 final class SearchPhotoViewModel {
     
+    private var cancellable = Set<AnyCancellable>()
     private let searchPhotoUseCase: SearchPhotoUseCase
     
-    private var photos: [Photo] = []
-    let items: BehaviorRelay<[Photo]> = BehaviorRelay(value: [])
+    @Published var combineItems: [Photo] = []
     
     init(
         searchPhotoUseCase: SearchPhotoUseCase
@@ -33,16 +31,12 @@ final class SearchPhotoViewModel {
     }
     
     func load(query: String) {
-        searchPhotoUseCase.execute(
-            with: .init(query: query, page: 1)) { [weak self] result in
-                switch result {
-                case let .success(photos):
-                    self?.photos = photos
-                    self?.items.accept(photos)
-                    
-                case let .failure(error):
-                    print(error)
-                }
+        searchPhotoUseCase.execute(with: .init(query: query, page: 1))
+            .map(\.results)
+            .assertNoFailure()
+            .sink { photo in
+                self.combineItems = photo.map { $0.toDomain() }
             }
+            .store(in: &cancellable)
     }
 }
