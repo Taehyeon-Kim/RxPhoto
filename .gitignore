@@ -128,4 +128,7 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+### API Key
+**/APIKey.swift
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos,xcode
