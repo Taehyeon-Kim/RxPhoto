@@ -16,7 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ImageSearchViewController()
+        
+        let respository = PhotoRepositoryImpl()
+        let useCase = SearchPhotoUseCaseImpl(photoRepository: respository)
+        let viewModel = SearchPhotoViewModel(searchPhotoUseCase: useCase)
+        let viewController = SearchPhotoViewController(viewModel: viewModel)
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
 }

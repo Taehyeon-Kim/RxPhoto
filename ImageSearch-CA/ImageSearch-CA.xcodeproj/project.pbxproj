@@ -11,14 +11,13 @@
 		BD2B166A2904085F009A67BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16692904085F009A67BB /* SceneDelegate.swift */; };
 		BD2B167129040861009A67BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2B167029040861009A67BB /* Assets.xcassets */; };
 		BD2B167429040861009A67BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2B167229040861009A67BB /* LaunchScreen.storyboard */; };
-		BD2B168529040900009A67BB /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168429040900009A67BB /* ImageSearchViewController.swift */; };
+		BD2B168529040900009A67BB /* SearchPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168429040900009A67BB /* SearchPhotoViewController.swift */; };
 		BD2B168C29040A05009A67BB /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168B29040A05009A67BB /* Environment.swift */; };
 		BD2B168E29040A20009A67BB /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168D29040A20009A67BB /* UseCase.swift */; };
 		BD2B169029040A31009A67BB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168F29040A31009A67BB /* Photo.swift */; };
 		BD2B16A329040CA8009A67BB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A229040CA8009A67BB /* SnapKit */; };
 		BD2B16A629040CB9009A67BB /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A529040CB9009A67BB /* Then */; };
 		BD2B16A929040CDA009A67BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A829040CDA009A67BB /* Kingfisher */; };
-		BD2B16AC29040D3A009A67BB /* ReusableKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16AB29040D3A009A67BB /* ReusableKit */; };
 		BD2B16AF290411C1009A67BB /* PhotoResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16AE290411C1009A67BB /* PhotoResponseDTO+Mapping.swift */; };
 		BD2B16B1290415E9009A67BB /* SearchPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16B0290415E9009A67BB /* SearchPhotoUseCase.swift */; };
 		BD2B16B529042754009A67BB /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16B429042754009A67BB /* PhotoRepository.swift */; };
@@ -26,6 +25,10 @@
 		BD2B16BA29042851009A67BB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16B929042851009A67BB /* Alamofire */; };
 		BD2B16BC29042886009A67BB /* PhotoRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16BB29042886009A67BB /* PhotoRequestDTO+Mapping.swift */; };
 		BD2B16BE290429F7009A67BB /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16BD290429F7009A67BB /* APIKey.swift */; };
+		BD2B16C029043611009A67BB /* SearchPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B16BF29043611009A67BB /* SearchPhotoViewModel.swift */; };
+		BD2B16C329043944009A67BB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16C229043944009A67BB /* RxCocoa */; };
+		BD2B16C529043944009A67BB /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16C429043944009A67BB /* RxRelay */; };
+		BD2B16C729043944009A67BB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16C629043944009A67BB /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +38,10 @@
 		BD2B167029040861009A67BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2B167329040861009A67BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD2B167529040861009A67BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD2B168429040900009A67BB /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		BD2B168429040900009A67BB /* SearchPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewController.swift; sourceTree = "<group>"; };
 		BD2B168B29040A05009A67BB /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		BD2B168D29040A20009A67BB /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		BD2B168F29040A31009A67BB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		BD2B169529040A4E009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD2B169B29040A98009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD2B169D29040A9F009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD2B169F29040AA7009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		BD2B16B6290427E2009A67BB /* PhotoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepositoryImpl.swift; sourceTree = "<group>"; };
 		BD2B16BB29042886009A67BB /* PhotoRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
 		BD2B16BD290429F7009A67BB /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BD2B16BF29043611009A67BB /* SearchPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +59,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2B16C529043944009A67BB /* RxRelay in Frameworks */,
 				BD2B16BA29042851009A67BB /* Alamofire in Frameworks */,
 				BD2B16A929040CDA009A67BB /* Kingfisher in Frameworks */,
+				BD2B16C329043944009A67BB /* RxCocoa in Frameworks */,
 				BD2B16A329040CA8009A67BB /* SnapKit in Frameworks */,
-				BD2B16AC29040D3A009A67BB /* ReusableKit in Frameworks */,
 				BD2B16A629040CB9009A67BB /* Then in Frameworks */,
+				BD2B16C729043944009A67BB /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +142,7 @@
 		BD2B167F290408AA009A67BB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				BD2B1683290408EC009A67BB /* ImageSearch */,
+				BD2B1683290408EC009A67BB /* SearchPhoto */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -168,19 +173,19 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		BD2B1683290408EC009A67BB /* ImageSearch */ = {
+		BD2B1683290408EC009A67BB /* SearchPhoto */ = {
 			isa = PBXGroup;
 			children = (
-				BD2B168429040900009A67BB /* ImageSearchViewController.swift */,
+				BD2B168429040900009A67BB /* SearchPhotoViewController.swift */,
+				BD2B16BF29043611009A67BB /* SearchPhotoViewModel.swift */,
 			);
-			path = ImageSearch;
+			path = SearchPhoto;
 			sourceTree = "<group>";
 		};
 		BD2B1686290409AB009A67BB /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				BD2B16AD290411AD009A67BB /* DataMapping */,
-				BD2B169529040A4E009A67BB /* .gitkeep */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -281,8 +286,10 @@
 				BD2B16A229040CA8009A67BB /* SnapKit */,
 				BD2B16A529040CB9009A67BB /* Then */,
 				BD2B16A829040CDA009A67BB /* Kingfisher */,
-				BD2B16AB29040D3A009A67BB /* ReusableKit */,
 				BD2B16B929042851009A67BB /* Alamofire */,
+				BD2B16C229043944009A67BB /* RxCocoa */,
+				BD2B16C429043944009A67BB /* RxRelay */,
+				BD2B16C629043944009A67BB /* RxSwift */,
 			);
 			productName = "ImageSearch-CA";
 			productReference = BD2B16642904085F009A67BB /* ImageSearch-CA.app */;
@@ -316,8 +323,8 @@
 				BD2B16A129040CA8009A67BB /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BD2B16A429040CB9009A67BB /* XCRemoteSwiftPackageReference "Then" */,
 				BD2B16A729040CDA009A67BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				BD2B16AA29040D3A009A67BB /* XCRemoteSwiftPackageReference "ReusableKit" */,
 				BD2B16B829042851009A67BB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BD2B16C129043944009A67BB /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = BD2B16652904085F009A67BB /* Products */;
 			projectDirPath = "";
@@ -349,10 +356,11 @@
 				BD2B168E29040A20009A67BB /* UseCase.swift in Sources */,
 				BD2B16682904085F009A67BB /* AppDelegate.swift in Sources */,
 				BD2B16BC29042886009A67BB /* PhotoRequestDTO+Mapping.swift in Sources */,
+				BD2B16C029043611009A67BB /* SearchPhotoViewModel.swift in Sources */,
 				BD2B168C29040A05009A67BB /* Environment.swift in Sources */,
 				BD2B16B1290415E9009A67BB /* SearchPhotoUseCase.swift in Sources */,
 				BD2B166A2904085F009A67BB /* SceneDelegate.swift in Sources */,
-				BD2B168529040900009A67BB /* ImageSearchViewController.swift in Sources */,
+				BD2B168529040900009A67BB /* SearchPhotoViewController.swift in Sources */,
 				BD2B16B529042754009A67BB /* PhotoRepository.swift in Sources */,
 				BD2B16B7290427E2009A67BB /* PhotoRepositoryImpl.swift in Sources */,
 				BD2B16BE290429F7009A67BB /* APIKey.swift in Sources */,
@@ -598,20 +606,20 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		BD2B16AA29040D3A009A67BB /* XCRemoteSwiftPackageReference "ReusableKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devxoul/ReusableKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		BD2B16B829042851009A67BB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
+			};
+		};
+		BD2B16C129043944009A67BB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -632,15 +640,25 @@
 			package = BD2B16A729040CDA009A67BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		BD2B16AB29040D3A009A67BB /* ReusableKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BD2B16AA29040D3A009A67BB /* XCRemoteSwiftPackageReference "ReusableKit" */;
-			productName = ReusableKit;
-		};
 		BD2B16B929042851009A67BB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD2B16B829042851009A67BB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BD2B16C229043944009A67BB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD2B16C129043944009A67BB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BD2B16C429043944009A67BB /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD2B16C129043944009A67BB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BD2B16C629043944009A67BB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD2B16C129043944009A67BB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
