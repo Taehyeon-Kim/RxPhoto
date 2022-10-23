@@ -10,6 +10,7 @@ import Foundation
 /// Domain Model
 /// 사용자와 가장 맞닿아 있는 데이터
 struct Photo: Hashable, Identifiable {
+    
     typealias ID = String
     
     let id: ID

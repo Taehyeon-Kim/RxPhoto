@@ -13,7 +13,6 @@
 		BD2B167429040861009A67BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2B167229040861009A67BB /* LaunchScreen.storyboard */; };
 		BD2B168529040900009A67BB /* SearchPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168429040900009A67BB /* SearchPhotoViewController.swift */; };
 		BD2B168C29040A05009A67BB /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168B29040A05009A67BB /* Environment.swift */; };
-		BD2B168E29040A20009A67BB /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168D29040A20009A67BB /* UseCase.swift */; };
 		BD2B169029040A31009A67BB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2B168F29040A31009A67BB /* Photo.swift */; };
 		BD2B16A329040CA8009A67BB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A229040CA8009A67BB /* SnapKit */; };
 		BD2B16A629040CB9009A67BB /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD2B16A529040CB9009A67BB /* Then */; };
@@ -40,7 +39,6 @@
 		BD2B167529040861009A67BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD2B168429040900009A67BB /* SearchPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewController.swift; sourceTree = "<group>"; };
 		BD2B168B29040A05009A67BB /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		BD2B168D29040A20009A67BB /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		BD2B168F29040A31009A67BB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BD2B169B29040A98009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		BD2B169D29040A9F009A67BB /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 		BD2B1688290409B8009A67BB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				BD2B168D29040A20009A67BB /* UseCase.swift */,
 				BD2B16B0290415E9009A67BB /* SearchPhotoUseCase.swift */,
 			);
 			path = UseCases;
@@ -353,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2B169029040A31009A67BB /* Photo.swift in Sources */,
-				BD2B168E29040A20009A67BB /* UseCase.swift in Sources */,
 				BD2B16682904085F009A67BB /* AppDelegate.swift in Sources */,
 				BD2B16BC29042886009A67BB /* PhotoRequestDTO+Mapping.swift in Sources */,
 				BD2B16C029043611009A67BB /* SearchPhotoViewModel.swift in Sources */,

@@ -9,20 +9,22 @@ import Foundation
 import Combine
 
 final class PhotoRepositoryImpl: PhotoRepository {
+    
     func fetchPhotoList(
         query: String,
         page: Int
-    ) -> AnyPublisher<PhotoResponseDTO, Error> {
+    ) -> AnyPublisher<[Photo], Error> {
 
         let urlPath = "\(APIKey.searchURL)\(query)"
-        let headers: HTTPHeaders = ["Authorization": APIKey.authorization]
-        
         var urlRequest = URLRequest(url: URL(string: urlPath)!)
-        urlRequest.headers = headers
+        urlRequest.setValue(APIKey.authorization, forHTTPHeaderField: "Authorization")
         
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .map(\.data)
             .decode(type: PhotoResponseDTO.self, decoder: JSONDecoder())
+            .map { response in
+                return response.results.map { $0.toDomain() }
+            }
             .eraseToAnyPublisher()
     }
 }

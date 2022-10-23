@@ -30,13 +30,11 @@ final class SearchPhotoViewModel {
         load(query: query)
     }
     
-    func load(query: String) {
+    private func load(query: String) {
         searchPhotoUseCase.execute(with: .init(query: query, page: 1))
-            .map(\.results)
+            .map { $0 }
             .assertNoFailure()
-            .sink { photo in
-                self.combineItems = photo.map { $0.toDomain() }
-            }
+            .assign(to: \.combineItems, on: self)
             .store(in: &cancellable)
     }
 }

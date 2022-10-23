@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol PhotoRepository {
-    func fetchPhotoList(query: String, page: Int) -> AnyPublisher<PhotoResponseDTO, Error>
+    func fetchPhotoList(query: String, page: Int) -> AnyPublisher<[Photo], Error>
 }
