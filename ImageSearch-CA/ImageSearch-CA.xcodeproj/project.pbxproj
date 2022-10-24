@@ -31,6 +31,7 @@
 		BDD960372906AB86006A1D15 /* NetworkAPIDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD960362906AB86006A1D15 /* NetworkAPIDefinition.swift */; };
 		BDD960392906ABA8006A1D15 /* NetworkAPIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */; };
 		BDD9603B2906AD48006A1D15 /* NetworkAPI+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */; };
+		BDD9603D2906B223006A1D15 /* NetworkAPI+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		BDD960362906AB86006A1D15 /* NetworkAPIDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIDefinition.swift; sourceTree = "<group>"; };
 		BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIKit.swift; sourceTree = "<group>"; };
 		BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAPI+Method.swift"; sourceTree = "<group>"; };
+		BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAPI+Request.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				BDD960362906AB86006A1D15 /* NetworkAPIDefinition.swift */,
 				BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */,
 				BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */,
+				BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				BD2B16B7290427E2009A67BB /* PhotoRepositoryImpl.swift in Sources */,
 				BD2B16BE290429F7009A67BB /* APIKey.swift in Sources */,
 				BDD960372906AB86006A1D15 /* NetworkAPIDefinition.swift in Sources */,
+				BDD9603D2906B223006A1D15 /* NetworkAPI+Request.swift in Sources */,
 				BD2B16AF290411C1009A67BB /* PhotoResponseDTO+Mapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
