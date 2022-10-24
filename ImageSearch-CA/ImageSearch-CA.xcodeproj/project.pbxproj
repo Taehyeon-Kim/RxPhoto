@@ -32,6 +32,9 @@
 		BDD960392906ABA8006A1D15 /* NetworkAPIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */; };
 		BDD9603B2906AD48006A1D15 /* NetworkAPI+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */; };
 		BDD9603D2906B223006A1D15 /* NetworkAPI+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */; };
+		BDD9604E2906E73E006A1D15 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9604D2906E73E006A1D15 /* PhotoAPI.swift */; };
+		BDD960502906E7B6006A1D15 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9604F2906E7B6006A1D15 /* EmptyResponse.swift */; };
+		BDD960522906E809006A1D15 /* EmptyParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD960512906E809006A1D15 /* EmptyParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIKit.swift; sourceTree = "<group>"; };
 		BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAPI+Method.swift"; sourceTree = "<group>"; };
 		BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkAPI+Request.swift"; sourceTree = "<group>"; };
+		BDD9604D2906E73E006A1D15 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
+		BDD9604F2906E7B6006A1D15 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		BDD960512906E809006A1D15 /* EmptyParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,12 +162,8 @@
 		BD2B1680290408AE009A67BB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BD2B16BD290429F7009A67BB /* APIKey.swift */,
-				BD2B168B29040A05009A67BB /* Environment.swift */,
-				BDD960362906AB86006A1D15 /* NetworkAPIDefinition.swift */,
-				BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */,
-				BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */,
-				BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */,
+				BDD9604A2906E6C9006A1D15 /* APIs */,
+				BDD960492906E670006A1D15 /* Foundation */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -275,6 +277,29 @@
 			path = DataMapping;
 			sourceTree = "<group>";
 		};
+		BDD960492906E670006A1D15 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B16BD290429F7009A67BB /* APIKey.swift */,
+				BD2B168B29040A05009A67BB /* Environment.swift */,
+				BDD960362906AB86006A1D15 /* NetworkAPIDefinition.swift */,
+				BDD960382906ABA8006A1D15 /* NetworkAPIKit.swift */,
+				BDD9603A2906AD48006A1D15 /* NetworkAPI+Method.swift */,
+				BDD9603C2906B223006A1D15 /* NetworkAPI+Request.swift */,
+				BDD9604F2906E7B6006A1D15 /* EmptyResponse.swift */,
+				BDD960512906E809006A1D15 /* EmptyParameter.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		BDD9604A2906E6C9006A1D15 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				BDD9604D2906E73E006A1D15 /* PhotoAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,11 +392,14 @@
 				BD2B16BC29042886009A67BB /* PhotoRequestDTO+Mapping.swift in Sources */,
 				BDD960392906ABA8006A1D15 /* NetworkAPIKit.swift in Sources */,
 				BD2B16C029043611009A67BB /* SearchPhotoViewModel.swift in Sources */,
+				BDD9604E2906E73E006A1D15 /* PhotoAPI.swift in Sources */,
 				BD2B168C29040A05009A67BB /* Environment.swift in Sources */,
 				BD2B16B1290415E9009A67BB /* SearchPhotoUseCase.swift in Sources */,
 				BD2B166A2904085F009A67BB /* SceneDelegate.swift in Sources */,
 				BD2B168529040900009A67BB /* SearchPhotoViewController.swift in Sources */,
+				BDD960522906E809006A1D15 /* EmptyParameter.swift in Sources */,
 				BD2B16B529042754009A67BB /* PhotoRepository.swift in Sources */,
+				BDD960502906E7B6006A1D15 /* EmptyResponse.swift in Sources */,
 				BD2B16B7290427E2009A67BB /* PhotoRepositoryImpl.swift in Sources */,
 				BD2B16BE290429F7009A67BB /* APIKey.swift in Sources */,
 				BDD960372906AB86006A1D15 /* NetworkAPIDefinition.swift in Sources */,
