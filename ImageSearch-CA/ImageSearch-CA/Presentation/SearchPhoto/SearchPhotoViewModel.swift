@@ -30,7 +30,7 @@ final class SearchPhotoViewModel {
         load(query: query)
     }
     
-    private func load(query: String) {
+    func load(query: String) {
         searchPhotoUseCase.execute(with: .init(query: query, page: 1))
             .map { $0 }
             .assertNoFailure()
