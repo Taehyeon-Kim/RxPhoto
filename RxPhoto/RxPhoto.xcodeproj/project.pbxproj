@@ -19,6 +19,7 @@
 		BD101379290A45C800C60279 /* PhotoSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101378290A45C800C60279 /* PhotoSearchView.swift */; };
 		BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */; };
 		BD101380290A468D00C60279 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD10137F290A468D00C60279 /* Then */; };
+		BD101383290A608200C60279 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101382290A608200C60279 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
 		BD101378290A45C800C60279 /* PhotoSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchView.swift; sourceTree = "<group>"; };
 		BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
+		BD101382290A608200C60279 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				BD101367290A44A600C60279 /* Application */,
+				BD101381290A607500C60279 /* Core */,
 				BD10136A290A44D200C60279 /* Presentation */,
 				BD101368290A44B100C60279 /* Resources */,
 				BD101369290A44C600C60279 /* Supports */,
@@ -134,6 +137,14 @@
 				BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD101381290A607500C60279 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BD101382290A608200C60279 /* BaseViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */,
 				BD101379290A45C800C60279 /* PhotoSearchView.swift in Sources */,
 				BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */,
+				BD101383290A608200C60279 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
