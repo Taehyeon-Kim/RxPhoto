@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD101354290A447F00C60279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101353290A447F00C60279 /* AppDelegate.swift */; };
+		BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101355290A447F00C60279 /* SceneDelegate.swift */; };
+		BD10135D290A448000C60279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD10135C290A448000C60279 /* Assets.xcassets */; };
+		BD101360290A448000C60279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD10135E290A448000C60279 /* LaunchScreen.storyboard */; };
+		BD10136D290A44FA00C60279 /* PhotoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */; };
+		BD101370290A45A300C60279 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BD10136F290A45A300C60279 /* SnapKit */; };
+		BD101373290A45B600C60279 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD101372290A45B600C60279 /* RxCocoa */; };
+		BD101375290A45B600C60279 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BD101374290A45B600C60279 /* RxRelay */; };
+		BD101377290A45B600C60279 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD101376290A45B600C60279 /* RxSwift */; };
+		BD101379290A45C800C60279 /* PhotoSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101378290A45C800C60279 /* PhotoSearchView.swift */; };
+		BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */; };
+		BD101380290A468D00C60279 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD10137F290A468D00C60279 /* Then */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD101350290A447F00C60279 /* RxPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD101353290A447F00C60279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD101355290A447F00C60279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD10135C290A448000C60279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD10135F290A448000C60279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD101361290A448000C60279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
+		BD101378290A45C800C60279 /* PhotoSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchView.swift; sourceTree = "<group>"; };
+		BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD10134D290A447F00C60279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD101380290A468D00C60279 /* Then in Frameworks */,
+				BD101375290A45B600C60279 /* RxRelay in Frameworks */,
+				BD101373290A45B600C60279 /* RxCocoa in Frameworks */,
+				BD101377290A45B600C60279 /* RxSwift in Frameworks */,
+				BD101370290A45A300C60279 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD101347290A447F00C60279 = {
+			isa = PBXGroup;
+			children = (
+				BD101352290A447F00C60279 /* RxPhoto */,
+				BD101351290A447F00C60279 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD101351290A447F00C60279 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD101350290A447F00C60279 /* RxPhoto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD101352290A447F00C60279 /* RxPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				BD101367290A44A600C60279 /* Application */,
+				BD10136A290A44D200C60279 /* Presentation */,
+				BD101368290A44B100C60279 /* Resources */,
+				BD101369290A44C600C60279 /* Supports */,
+			);
+			path = RxPhoto;
+			sourceTree = "<group>";
+		};
+		BD101367290A44A600C60279 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BD101353290A447F00C60279 /* AppDelegate.swift */,
+				BD101355290A447F00C60279 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BD101368290A44B100C60279 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD10135C290A448000C60279 /* Assets.xcassets */,
+				BD10135E290A448000C60279 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD101369290A44C600C60279 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				BD101361290A448000C60279 /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		BD10136A290A44D200C60279 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BD10136B290A44D700C60279 /* PhotoSearch */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BD10136B290A44D700C60279 /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BD10137B290A45CF00C60279 /* ViewModel */,
+				BD10137A290A45CC00C60279 /* View */,
+			);
+			path = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		BD10137A290A45CC00C60279 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD101378290A45C800C60279 /* PhotoSearchView.swift */,
+				BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD10137B290A45CF00C60279 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD10134F290A447F00C60279 /* RxPhoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD101364290A448000C60279 /* Build configuration list for PBXNativeTarget "RxPhoto" */;
+			buildPhases = (
+				BD10134C290A447F00C60279 /* Sources */,
+				BD10134D290A447F00C60279 /* Frameworks */,
+				BD10134E290A447F00C60279 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxPhoto;
+			packageProductDependencies = (
+				BD10136F290A45A300C60279 /* SnapKit */,
+				BD101372290A45B600C60279 /* RxCocoa */,
+				BD101374290A45B600C60279 /* RxRelay */,
+				BD101376290A45B600C60279 /* RxSwift */,
+				BD10137F290A468D00C60279 /* Then */,
+			);
+			productName = RxPhoto;
+			productReference = BD101350290A447F00C60279 /* RxPhoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD101348290A447F00C60279 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					BD10134F290A447F00C60279 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = BD10134B290A447F00C60279 /* Build configuration list for PBXProject "RxPhoto" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD101347290A447F00C60279;
+			packageReferences = (
+				BD10136E290A45A200C60279 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BD101371290A45B600C60279 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				BD10137E290A468D00C60279 /* XCRemoteSwiftPackageReference "Then" */,
+			);
+			productRefGroup = BD101351290A447F00C60279 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD10134F290A447F00C60279 /* RxPhoto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD10134E290A447F00C60279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD101360290A448000C60279 /* LaunchScreen.storyboard in Resources */,
+				BD10135D290A448000C60279 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD10134C290A447F00C60279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD10136D290A44FA00C60279 /* PhotoSearchViewController.swift in Sources */,
+				BD101354290A447F00C60279 /* AppDelegate.swift in Sources */,
+				BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */,
+				BD101379290A45C800C60279 /* PhotoSearchView.swift in Sources */,
+				BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD10135E290A448000C60279 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD10135F290A448000C60279 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD101362290A448000C60279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD101363290A448000C60279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD101365290A448000C60279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RxPhoto/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.RxPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD101366290A448000C60279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RxPhoto/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.RxPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD10134B290A447F00C60279 /* Build configuration list for PBXProject "RxPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD101362290A448000C60279 /* Debug */,
+				BD101363290A448000C60279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD101364290A448000C60279 /* Build configuration list for PBXNativeTarget "RxPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD101365290A448000C60279 /* Debug */,
+				BD101366290A448000C60279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD10136E290A45A200C60279 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BD101371290A45B600C60279 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		BD10137E290A468D00C60279 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD10136F290A45A300C60279 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD10136E290A45A200C60279 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BD101372290A45B600C60279 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD101371290A45B600C60279 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		BD101374290A45B600C60279 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD101371290A45B600C60279 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		BD101376290A45B600C60279 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD101371290A45B600C60279 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		BD10137F290A468D00C60279 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD10137E290A468D00C60279 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BD101348290A447F00C60279 /* Project object */;
+}
