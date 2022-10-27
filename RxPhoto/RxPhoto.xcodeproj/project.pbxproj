@@ -16,7 +16,6 @@
 		BD101373290A45B600C60279 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BD101372290A45B600C60279 /* RxCocoa */; };
 		BD101375290A45B600C60279 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BD101374290A45B600C60279 /* RxRelay */; };
 		BD101377290A45B600C60279 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD101376290A45B600C60279 /* RxSwift */; };
-		BD101379290A45C800C60279 /* PhotoSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101378290A45C800C60279 /* PhotoSearchView.swift */; };
 		BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */; };
 		BD101380290A468D00C60279 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD10137F290A468D00C60279 /* Then */; };
 		BD101383290A608200C60279 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101382290A608200C60279 /* BaseViewController.swift */; };
@@ -30,7 +29,6 @@
 		BD10135F290A448000C60279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD101361290A448000C60279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
-		BD101378290A45C800C60279 /* PhotoSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchView.swift; sourceTree = "<group>"; };
 		BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
 		BD101382290A608200C60279 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +123,6 @@
 		BD10137A290A45CC00C60279 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD101378290A45C800C60279 /* PhotoSearchView.swift */,
 				BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */,
 			);
 			path = View;
@@ -232,7 +229,6 @@
 				BD10136D290A44FA00C60279 /* PhotoSearchViewController.swift in Sources */,
 				BD101354290A447F00C60279 /* AppDelegate.swift in Sources */,
 				BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */,
-				BD101379290A45C800C60279 /* PhotoSearchView.swift in Sources */,
 				BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */,
 				BD101383290A608200C60279 /* BaseViewController.swift in Sources */,
 			);
