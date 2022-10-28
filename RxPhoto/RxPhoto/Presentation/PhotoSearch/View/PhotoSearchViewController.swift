@@ -15,7 +15,9 @@ import Kingfisher
 
 final class PhotoSearchViewController: BaseViewController {
     
-    private var viewModel: PhotoSearchViewModel = PhotoSearchViewModelImpl()
+    private var viewModel: PhotoSearchViewModel = PhotoSearchViewModelImpl(
+        provider: ProviderImpl()
+    )
     
     // MARK: - UI
     
@@ -63,7 +65,14 @@ final class PhotoSearchViewController: BaseViewController {
             .bind(to: self.rx.title)
             .disposed(by: disposeBag)
         
-        viewModel.load()
+        searchBar.rx.text.orEmpty
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .asDriver(onErrorJustReturn: "")
+            .drive { query in
+                self.viewModel.load(with: query)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -100,9 +109,7 @@ extension PhotoSearchViewController {
         
         viewModel.dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
-            if let url = URL(string: item.imageURL) {
-                cell.backgroundImageView.kf.setImage(with: url)
-            }
+            cell.backgroundImageView.kf.setImage(with: item.imageURL)
             return cell
         })
     }

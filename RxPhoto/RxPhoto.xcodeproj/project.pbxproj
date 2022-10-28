@@ -14,6 +14,11 @@
 		BD0A35BE290C04FF003E6174 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35BD290C04FF003E6174 /* Responsable.swift */; };
 		BD0A35C0290C0523003E6174 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35BF290C0523003E6174 /* Endpoint.swift */; };
 		BD0A35C4290C066D003E6174 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35C3290C066D003E6174 /* Provider.swift */; };
+		BD0A35C9290C0BE3003E6174 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35C8290C0BE3003E6174 /* Environment.swift */; };
+		BD0A35CB290C0C73003E6174 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35CA290C0C73003E6174 /* APIKey.swift */; };
+		BD0A35CF290C0DFB003E6174 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35CE290C0DFB003E6174 /* APIEndpoints.swift */; };
+		BD0A35D2290C0E82003E6174 /* PhotoSearchResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35D1290C0E82003E6174 /* PhotoSearchResponseDTO.swift */; };
+		BD0A35D4290C0E8C003E6174 /* PhotoSearchRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A35D3290C0E8C003E6174 /* PhotoSearchRequestDTO.swift */; };
 		BD101354290A447F00C60279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101353290A447F00C60279 /* AppDelegate.swift */; };
 		BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101355290A447F00C60279 /* SceneDelegate.swift */; };
 		BD10135D290A448000C60279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD10135C290A448000C60279 /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 		BD0A35BD290C04FF003E6174 /* Responsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
 		BD0A35BF290C0523003E6174 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		BD0A35C3290C066D003E6174 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		BD0A35C8290C0BE3003E6174 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BD0A35CA290C0C73003E6174 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BD0A35CE290C0DFB003E6174 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		BD0A35D1290C0E82003E6174 /* PhotoSearchResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchResponseDTO.swift; sourceTree = "<group>"; };
+		BD0A35D3290C0E8C003E6174 /* PhotoSearchRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchRequestDTO.swift; sourceTree = "<group>"; };
 		BD101350290A447F00C60279 /* RxPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD101353290A447F00C60279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD101355290A447F00C60279 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +82,7 @@
 		BD0A35B2290BFEF1003E6174 /* NetworkInfrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				BD0A35C7290C0BD9003E6174 /* Environment */,
 				BD0A35C1290C0630003E6174 /* Foundation */,
 				BD0A35C2290C0660003E6174 /* Provider */,
 			);
@@ -99,6 +110,49 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		BD0A35C6290C0B8A003E6174 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BD101389290A72EF00C60279 /* Photo.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BD0A35C7290C0BD9003E6174 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A35C8290C0BE3003E6174 /* Environment.swift */,
+				BD0A35CA290C0C73003E6174 /* APIKey.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		BD0A35CC290C0DEB003E6174 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A35D0290C0E65003E6174 /* DTO */,
+				BD0A35CD290C0DF2003E6174 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BD0A35CD290C0DF2003E6174 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A35CE290C0DFB003E6174 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BD0A35D0290C0E65003E6174 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A35D3290C0E8C003E6174 /* PhotoSearchRequestDTO.swift */,
+				BD0A35D1290C0E82003E6174 /* PhotoSearchResponseDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		BD101347290A447F00C60279 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +174,8 @@
 			children = (
 				BD101367290A44A600C60279 /* Application */,
 				BD101381290A607500C60279 /* Core */,
+				BD0A35CC290C0DEB003E6174 /* Data */,
+				BD0A35C6290C0B8A003E6174 /* Domain */,
 				BD0A35B2290BFEF1003E6174 /* NetworkInfrastructure */,
 				BD10136A290A44D200C60279 /* Presentation */,
 				BD101368290A44B100C60279 /* Resources */,
@@ -165,7 +221,6 @@
 		BD10136B290A44D700C60279 /* PhotoSearch */ = {
 			isa = PBXGroup;
 			children = (
-				BD101388290A72E900C60279 /* Model */,
 				BD10137B290A45CF00C60279 /* ViewModel */,
 				BD10137A290A45CC00C60279 /* View */,
 			);
@@ -195,14 +250,6 @@
 				BD101382290A608200C60279 /* BaseViewController.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		BD101388290A72E900C60279 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BD101389290A72EF00C60279 /* Photo.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,13 +340,18 @@
 				BD10138A290A72EF00C60279 /* Photo.swift in Sources */,
 				BD0A35C4290C066D003E6174 /* Provider.swift in Sources */,
 				BD0A35BE290C04FF003E6174 /* Responsable.swift in Sources */,
+				BD0A35C9290C0BE3003E6174 /* Environment.swift in Sources */,
+				BD0A35CF290C0DFB003E6174 /* APIEndpoints.swift in Sources */,
 				BD0A35C0290C0523003E6174 /* Endpoint.swift in Sources */,
 				BD0A35B6290BFF47003E6174 /* Requestable.swift in Sources */,
 				BD10136D290A44FA00C60279 /* PhotoSearchViewController.swift in Sources */,
+				BD0A35D2290C0E82003E6174 /* PhotoSearchResponseDTO.swift in Sources */,
 				BD101354290A447F00C60279 /* AppDelegate.swift in Sources */,
 				BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */,
+				BD0A35CB290C0C73003E6174 /* APIKey.swift in Sources */,
 				BD0A35B8290BFFC6003E6174 /* HTTPMethod.swift in Sources */,
 				BD101387290A6C3400C60279 /* PhotoItemCell.swift in Sources */,
+				BD0A35D4290C0E8C003E6174 /* PhotoSearchRequestDTO.swift in Sources */,
 				BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */,
 				BD101383290A608200C60279 /* BaseViewController.swift in Sources */,
 				BD0A35BA290C00E6003E6174 /* NetworkError.swift in Sources */,
