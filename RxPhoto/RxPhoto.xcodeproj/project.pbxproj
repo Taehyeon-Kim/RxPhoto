@@ -19,6 +19,9 @@
 		BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */; };
 		BD101380290A468D00C60279 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = BD10137F290A468D00C60279 /* Then */; };
 		BD101383290A608200C60279 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101382290A608200C60279 /* BaseViewController.swift */; };
+		BD101387290A6C3400C60279 /* PhotoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101386290A6C3400C60279 /* PhotoItemCell.swift */; };
+		BD10138A290A72EF00C60279 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101389290A72EF00C60279 /* Photo.swift */; };
+		BD101398290B7E0C00C60279 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD101397290B7E0C00C60279 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,8 @@
 		BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
 		BD10137C290A45D700C60279 /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewModel.swift; sourceTree = "<group>"; };
 		BD101382290A608200C60279 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BD101386290A6C3400C60279 /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
+		BD101389290A72EF00C60279 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD101398290B7E0C00C60279 /* Kingfisher in Frameworks */,
 				BD101380290A468D00C60279 /* Then in Frameworks */,
 				BD101375290A45B600C60279 /* RxRelay in Frameworks */,
 				BD101373290A45B600C60279 /* RxCocoa in Frameworks */,
@@ -114,6 +120,7 @@
 		BD10136B290A44D700C60279 /* PhotoSearch */ = {
 			isa = PBXGroup;
 			children = (
+				BD101388290A72E900C60279 /* Model */,
 				BD10137B290A45CF00C60279 /* ViewModel */,
 				BD10137A290A45CC00C60279 /* View */,
 			);
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BD10136C290A44FA00C60279 /* PhotoSearchViewController.swift */,
+				BD101386290A6C3400C60279 /* PhotoItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +150,14 @@
 				BD101382290A608200C60279 /* BaseViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		BD101388290A72E900C60279 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD101389290A72EF00C60279 /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +182,7 @@
 				BD101374290A45B600C60279 /* RxRelay */,
 				BD101376290A45B600C60279 /* RxSwift */,
 				BD10137F290A468D00C60279 /* Then */,
+				BD101397290B7E0C00C60279 /* Kingfisher */,
 			);
 			productName = RxPhoto;
 			productReference = BD101350290A447F00C60279 /* RxPhoto.app */;
@@ -199,6 +216,7 @@
 				BD10136E290A45A200C60279 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				BD101371290A45B600C60279 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				BD10137E290A468D00C60279 /* XCRemoteSwiftPackageReference "Then" */,
+				BD101396290B7E0C00C60279 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = BD101351290A447F00C60279 /* Products */;
 			projectDirPath = "";
@@ -226,9 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD10138A290A72EF00C60279 /* Photo.swift in Sources */,
 				BD10136D290A44FA00C60279 /* PhotoSearchViewController.swift in Sources */,
 				BD101354290A447F00C60279 /* AppDelegate.swift in Sources */,
 				BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */,
+				BD101387290A6C3400C60279 /* PhotoItemCell.swift in Sources */,
 				BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */,
 				BD101383290A608200C60279 /* BaseViewController.swift in Sources */,
 			);
@@ -462,6 +482,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		BD101396290B7E0C00C60279 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -489,6 +517,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD10137E290A468D00C60279 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		BD101397290B7E0C00C60279 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD101396290B7E0C00C60279 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

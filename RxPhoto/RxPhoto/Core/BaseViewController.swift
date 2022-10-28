@@ -27,7 +27,10 @@ class BaseViewController: UIViewController {
     // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.setNeedsUpdateConstraints()
+        setupAttributes()
+        bind()
     }
     
     override func updateViewConstraints() {
@@ -38,6 +41,12 @@ class BaseViewController: UIViewController {
         super.updateViewConstraints()
     }
 
+    // MARK: - Attributes
+    func setupAttributes() {}
+    
     // MARK: - Constraints
     func setupConstraints() {}
+    
+    // MARK: - Bind
+    func bind() {}
 }
