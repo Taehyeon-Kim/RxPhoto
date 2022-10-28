@@ -8,10 +8,11 @@
 import Foundation
 
 struct Photo: Hashable {
-    let id = UUID()
+    let id: String
     let imageURL: URL
     
-    init(imageURL: URL) {
+    init(id: String, imageURL: URL) {
+        self.id = id
         self.imageURL = imageURL
     }
 }

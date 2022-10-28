@@ -19,6 +19,7 @@ struct PhotoSearchResponseDTO: Decodable {
     }
 
     struct Result: Decodable {
+        let id: String
         let user: User
         let urls: Urls
 
@@ -35,7 +36,7 @@ struct PhotoSearchResponseDTO: Decodable {
 extension PhotoSearchResponseDTO {
     func toDomain() -> [Photo] {
         return results.map {
-            Photo(imageURL: URL(string: $0.urls.small)!)
+            Photo(id: $0.id, imageURL: URL(string: $0.urls.small)!)
         }
     }
 }

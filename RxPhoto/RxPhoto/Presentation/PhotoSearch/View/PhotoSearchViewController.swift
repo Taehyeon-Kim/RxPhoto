@@ -73,6 +73,22 @@ final class PhotoSearchViewController: BaseViewController {
                 self.viewModel.load(with: query)
             }
             .disposed(by: disposeBag)
+        
+        collectionView.rx.itemSelected
+            .asDriver()
+            .drive { [weak self] indexPath in
+                guard let self = self else { return }
+                let id = self.viewModel.photos.value[indexPath.item].id
+                self.navigateToPhotoDetail(id: id)
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func navigateToPhotoDetail(id: String) {
+        let provider = ProviderImpl()
+        let viewModel = PhotoDetailViewModelImpl(provider: provider, id: id)
+        let viewController = PhotoDetailViewController(viewModel: viewModel)
+        present(viewController, animated: true)
     }
 }
 

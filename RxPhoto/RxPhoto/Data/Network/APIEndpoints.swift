@@ -15,8 +15,17 @@ enum APIEndpoints {
             path: EndpointPath.searchPhoto.path,
             method: .get,
             queryParameters: photoSearchRequestDTO,
-            headers: ["Authorization": "Client-ID \(APIKey.secrets)"],
-            sampleData: nil
+            headers: ["Authorization": "Client-ID \(APIKey.secrets)"]
+        )
+    }
+    
+    static func fetchSinglePhoto(id: String) -> Endpoint<PhotoSingleResponseDTO> {
+        return Endpoint(
+            baseURL: Environment.dev.baseURL,
+            path: EndpointPath.singlePhoto(id: id).path,
+            method: .get,
+            queryParameters: nil,
+            headers: ["Authorization": "Client-ID \(APIKey.secrets)"]
         )
     }
 }
