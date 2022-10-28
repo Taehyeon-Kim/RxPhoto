@@ -153,9 +153,8 @@
 		BD0A35D0290C0E65003E6174 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				BD0A35D3290C0E8C003E6174 /* PhotoSearchRequestDTO.swift */,
-				BD0A35E2290C31EB003E6174 /* PhotoSingleResponseDTO.swift */,
-				BD0A35D1290C0E82003E6174 /* PhotoSearchResponseDTO.swift */,
+				BD0A35E4290C3C08003E6174 /* PhotoSearch */,
+				BD0A35E5290C3C10003E6174 /* PhotoSingle */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -183,6 +182,23 @@
 				BD0A35DE290C262A003E6174 /* PhotoDetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD0A35E4290C3C08003E6174 /* PhotoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A35D3290C0E8C003E6174 /* PhotoSearchRequestDTO.swift */,
+				BD0A35D1290C0E82003E6174 /* PhotoSearchResponseDTO.swift */,
+			);
+			path = PhotoSearch;
+			sourceTree = "<group>";
+		};
+		BD0A35E5290C3C10003E6174 /* PhotoSingle */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A35E2290C31EB003E6174 /* PhotoSingleResponseDTO.swift */,
+			);
+			path = PhotoSingle;
 			sourceTree = "<group>";
 		};
 		BD101347290A447F00C60279 = {

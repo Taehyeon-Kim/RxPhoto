@@ -24,7 +24,6 @@ enum APIEndpoints {
             baseURL: Environment.dev.baseURL,
             path: EndpointPath.singlePhoto(id: id).path,
             method: .get,
-            queryParameters: nil,
             headers: ["Authorization": "Client-ID \(APIKey.secrets)"]
         )
     }
