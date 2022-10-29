@@ -30,6 +30,6 @@ struct PhotoListResponseDTO: Decodable {
 
 extension PhotoListResponseDTO {
     func toDomain() -> Photo {
-        return Photo(id: id, imageURL: URL(string: urls.full)!)
+        return Photo(id: id, imageURL: URL(string: urls.small)!)
     }
 }
