@@ -166,28 +166,28 @@
 		BD0A35F6290D035C003E6174 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD0A35FC290D0411003E6174 /* RemoteModel */,
-				BD0A35F7290D0377003E6174 /* PresentationModel */,
+				BD0A35FC290D0411003E6174 /* DTO */,
+				BD0A35F7290D0377003E6174 /* Domain */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BD0A35F7290D0377003E6174 /* PresentationModel */ = {
+		BD0A35F7290D0377003E6174 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				BD101389290A72EF00C60279 /* Photo.swift */,
 			);
-			path = PresentationModel;
+			path = Domain;
 			sourceTree = "<group>";
 		};
-		BD0A35FC290D0411003E6174 /* RemoteModel */ = {
+		BD0A35FC290D0411003E6174 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				BD0A35EE290CC9E9003E6174 /* PhotoList */,
 				BD0A35E4290C3C08003E6174 /* PhotoSearch */,
 				BD0A35E5290C3C10003E6174 /* PhotoSingle */,
 			);
-			path = RemoteModel;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		BD0A35FD290D045A003E6174 /* Network */ = {
