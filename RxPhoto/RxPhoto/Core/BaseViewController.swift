@@ -22,23 +22,14 @@ class BaseViewController: UIViewController {
     
     // MARK: - Properties
     var disposeBag = DisposeBag()
-    private(set) var didSetupConstraints = false
     
     // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.setNeedsUpdateConstraints()
         setupAttributes()
+        setupConstraints()
         bind()
-    }
-    
-    override func updateViewConstraints() {
-        if !didSetupConstraints {
-            setupConstraints()
-            didSetupConstraints = true
-        }
-        super.updateViewConstraints()
     }
 
     // MARK: - Attributes
