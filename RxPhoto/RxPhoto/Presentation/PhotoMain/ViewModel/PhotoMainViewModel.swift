@@ -15,8 +15,8 @@ final class PhotoMainViewModel {
     var navigationTitle = BehaviorRelay(value: "Explore")
     var photos = BehaviorRelay<[Photo]>(value: [])
     
-    var currentPage = 0
-    var perPage = 10
+    private var currentPage = 0
+    private var perPage = 10
 
     func fetchPhotos() {
         let requestDTO = PhotoListRequestDTO(page: currentPage, perPage: perPage)

@@ -8,11 +8,11 @@
 import Foundation
 
 enum Environment {
-    case dev
+    // case dev
 }
 
 extension Environment {
-    var baseURL: String {
+    static var baseURL: String {
         return "https://api.unsplash.com"
     }
 }

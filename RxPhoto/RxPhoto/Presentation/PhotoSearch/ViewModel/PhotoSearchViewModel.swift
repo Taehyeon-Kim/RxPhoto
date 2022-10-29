@@ -26,8 +26,8 @@ final class PhotoSearchViewModelImpl: PhotoSearchViewModel {
     var navigationTitle = BehaviorRelay(value: "PhotoSearch")
     var photos = BehaviorRelay<[Photo]>(value: [])
     
-    var currentPage: Int = 0
-    var query = ""
+    private var currentPage: Int = 0
+    private var query = ""
     
     func search(with query: String = "") {
         let searchQuery = query.isEmpty ? self.query : query
