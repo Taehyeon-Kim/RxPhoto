@@ -13,27 +13,20 @@ import RxRelay
 protocol PhotoDetailViewModel {
     var photo: PublishRelay<Photo> { get }
     
-    func load()
+    func fetchSinglePhoto()
 }
 
 final class PhotoDetailViewModelImpl: PhotoDetailViewModel {
     
-    let provider: Provider
-    
-    let id: String
+    private let id: String
     var photo = PublishRelay<Photo>()
     
-    init(
-        provider: Provider,
-        id: String
-    ) {
-        self.provider = provider
+    init(id: String) {
         self.id = id
     }
     
-    func load() {
-        let endpoint = APIEndpoints.fetchSinglePhoto(id: id)
-        provider.request(with: endpoint) { result in
+    func fetchSinglePhoto() {
+        PhotoService.shared.fetchSinglePhoto(id: id) { result in
             switch result {
             case .success(let data):
                 let photo = data.toDomain()

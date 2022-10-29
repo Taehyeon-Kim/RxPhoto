@@ -44,7 +44,7 @@ final class PhotoDetailViewController: BaseViewController {
     }
     
     override func bind() {
-        viewModel.load()
+        viewModel.fetchSinglePhoto()
         
         viewModel.photo
             .observe(on: MainScheduler.instance)

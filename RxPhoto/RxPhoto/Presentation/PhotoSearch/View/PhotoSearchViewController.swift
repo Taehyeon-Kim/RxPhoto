@@ -15,9 +15,7 @@ import Kingfisher
 
 final class PhotoSearchViewController: BaseViewController {
     
-    private var viewModel: PhotoSearchViewModel = PhotoSearchViewModelImpl(
-        provider: ProviderImpl()
-    )
+    private var viewModel: PhotoSearchViewModel = PhotoSearchViewModelImpl()
     
     // MARK: - UI
     
@@ -70,7 +68,7 @@ final class PhotoSearchViewController: BaseViewController {
             .distinctUntilChanged()
             .asDriver(onErrorJustReturn: "")
             .drive { query in
-                self.viewModel.load(with: query)
+                self.viewModel.search(with: query)
             }
             .disposed(by: disposeBag)
         
@@ -85,8 +83,7 @@ final class PhotoSearchViewController: BaseViewController {
     }
     
     private func navigateToPhotoDetail(id: String) {
-        let provider = ProviderImpl()
-        let viewModel = PhotoDetailViewModelImpl(provider: provider, id: id)
+        let viewModel = PhotoDetailViewModelImpl(id: id)
         let viewController = PhotoDetailViewController(viewModel: viewModel)
         present(viewController, animated: true)
     }
@@ -125,6 +122,7 @@ extension PhotoSearchViewController {
         
         viewModel.dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+            cell.backgroundImageView.kf.indicatorType = .activity
             cell.backgroundImageView.kf.setImage(with: item.imageURL)
             return cell
         })

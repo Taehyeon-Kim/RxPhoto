@@ -11,9 +11,7 @@ import RxCocoa
 
 final class PhotoMainViewController: BaseViewController {
     
-    private let viewModel = PhotoMainViewModel(
-        provider: ProviderImpl()
-    )
+    private let viewModel = PhotoMainViewModel()
     
     private let searchBarButtonItem = UIBarButtonItem(systemItem: .search)
     private lazy var collectionView = UICollectionView(
