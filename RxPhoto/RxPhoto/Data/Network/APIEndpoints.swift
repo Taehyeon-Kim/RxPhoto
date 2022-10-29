@@ -8,7 +8,6 @@
 import Foundation
 
 enum APIEndpoints {
-    
     static func fetchSearchPhotos(with photoSearchRequestDTO: PhotoSearchRequestDTO) -> Endpoint<PhotoSearchResponseDTO> {
         return Endpoint(
             baseURL: Environment.dev.baseURL,
@@ -24,6 +23,16 @@ enum APIEndpoints {
             baseURL: Environment.dev.baseURL,
             path: EndpointPath.singlePhoto(id: id).path,
             method: .get,
+            headers: ["Authorization": "Client-ID \(APIKey.secrets)"]
+        )
+    }
+    
+    static func fetchPhotoList(with photoListRequestDTO: PhotoListRequestDTO) -> Endpoint<[PhotoListResponseDTO]> {
+        return Endpoint(
+            baseURL: Environment.dev.baseURL,
+            path: EndpointPath.listPhoto.path,
+            method: .get,
+            queryParameters: photoListRequestDTO,
             headers: ["Authorization": "Client-ID \(APIKey.secrets)"]
         )
     }
