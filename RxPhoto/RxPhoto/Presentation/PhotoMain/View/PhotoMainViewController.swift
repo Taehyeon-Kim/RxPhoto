@@ -11,7 +11,7 @@ import RxCocoa
 
 final class PhotoMainViewController: BaseViewController {
     
-    private let viewModel = PhotoMainViewModel()
+    private let viewModel: PhotoMainViewModel = PhotoMainViewModelImpl()
     
     private let searchBarButtonItem = UIBarButtonItem(systemItem: .search)
     private lazy var collectionView = UICollectionView(
@@ -44,7 +44,15 @@ final class PhotoMainViewController: BaseViewController {
     }
     
     override func bind() {
+        // fetch 해온 데이터만 Relay에 다시 넣는 것이 맞을까?
+        // subscribe 부분에서 collectionView 세팅해주면 안되는건가?
         viewModel.fetchPhotos()
+            .subscribe { photos in
+                self.viewModel.photos.accept(photos)
+            } onFailure: { error in
+                print(error)
+            }
+            .disposed(by: disposeBag)
         
         viewModel.navigationTitle
             .asDriver()

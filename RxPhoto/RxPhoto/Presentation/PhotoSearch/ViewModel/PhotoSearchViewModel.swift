@@ -31,7 +31,7 @@ final class PhotoSearchViewModelImpl: PhotoSearchViewModel {
     
     func search(with query: String = "") {
         let searchQuery = query.isEmpty ? self.query : query
-        let query = searchQuery.isEmpty ? nil : searchQuery
+        let query = searchQuery.isEmpty ? nil : searchQuery     // 가장 처음인 경우에는 nil이 만들어질 수 있음
         guard let query else { return }
         self.query = query
         

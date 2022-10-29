@@ -21,7 +21,7 @@ final class PhotoService {
     ) {
         let urlPath = Environment.baseURL + EndpointPath.listPhoto.path
         guard let parameter = try? request.toDictionary() else { return }
-        let headers: HTTPHeaders = ["Authorization": "Client-ID \(Secrets.accessKey)"]
+        let headers: HTTPHeaders = ["Authorization": "Client-ID \(APIKey.secrets)"]
         
         AF.request(urlPath, method: .get, parameters: parameter, encoding: URLEncoding.default, headers: headers)
             .validate(statusCode: 200...299)
@@ -42,7 +42,7 @@ final class PhotoService {
     ) {
         let urlPath = Environment.baseURL + EndpointPath.searchPhoto.path
         guard let parameter = try? request.toDictionary() else { return }
-        let headers: HTTPHeaders = ["Authorization": "Client-ID \(Secrets.accessKey)"]
+        let headers: HTTPHeaders = ["Authorization": "Client-ID \(APIKey.secrets)"]
         
         AF.request(urlPath, method: .get, parameters: parameter, encoding: URLEncoding.default, headers: headers)
             .validate(statusCode: 200...299)
@@ -62,7 +62,7 @@ final class PhotoService {
         completion: @escaping (Result<PhotoSingleResponseDTO, NetworkError>) -> Void
     ) {
         let urlPath = Environment.baseURL + EndpointPath.singlePhoto(id: id).path
-        let headers: HTTPHeaders = ["Authorization": "Client-ID \(Secrets.accessKey)"]
+        let headers: HTTPHeaders = ["Authorization": "Client-ID \(APIKey.secrets)"]
         
         AF.request(urlPath, method: .get, headers: headers)
             .validate(statusCode: 200...299)

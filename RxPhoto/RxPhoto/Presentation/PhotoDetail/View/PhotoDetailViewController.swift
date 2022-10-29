@@ -22,7 +22,7 @@ final class PhotoDetailViewController: BaseViewController {
         self.viewModel = viewModel
     }
     
-    required convenience init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
