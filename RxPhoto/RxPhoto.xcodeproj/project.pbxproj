@@ -38,6 +38,7 @@
 		BD101387290A6C3400C60279 /* PhotoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101386290A6C3400C60279 /* PhotoItemCell.swift */; };
 		BD10138A290A72EF00C60279 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101389290A72EF00C60279 /* Photo.swift */; };
 		BD101398290B7E0C00C60279 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD101397290B7E0C00C60279 /* Kingfisher */; };
+		BD6527752910187400603259 /* PhotoMainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6527742910187400603259 /* PhotoMainSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		BD101382290A608200C60279 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BD101386290A6C3400C60279 /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
 		BD101389290A72EF00C60279 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BD6527742910187400603259 /* PhotoMainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMainSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		BD0A35E7290CBE73003E6174 /* PhotoMain */ = {
 			isa = PBXGroup;
 			children = (
+				BD6527732910186C00603259 /* Section */,
 				BD0A35E9290CBE9D003E6174 /* ViewModel */,
 				BD0A35E8290CBE9B003E6174 /* View */,
 			);
@@ -319,6 +322,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		BD6527732910186C00603259 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				BD6527742910187400603259 /* PhotoMainSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,6 +428,7 @@
 				BD101354290A447F00C60279 /* AppDelegate.swift in Sources */,
 				BD0A35ED290CBEB5003E6174 /* PhotoMainViewModelImpl.swift in Sources */,
 				BD101356290A447F00C60279 /* SceneDelegate.swift in Sources */,
+				BD6527752910187400603259 /* PhotoMainSection.swift in Sources */,
 				BD0A35CB290C0C73003E6174 /* APIKey.swift in Sources */,
 				BD0A35DF290C262A003E6174 /* PhotoDetailViewModel.swift in Sources */,
 				BD0A3601290D04A3003E6174 /* PhotoService.swift in Sources */,
