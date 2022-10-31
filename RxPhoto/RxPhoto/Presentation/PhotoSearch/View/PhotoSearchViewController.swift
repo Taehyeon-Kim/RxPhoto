@@ -16,6 +16,7 @@ import Kingfisher
 final class PhotoSearchViewController: BaseViewController {
     
     private var viewModel: PhotoSearchViewModel = PhotoSearchViewModelImpl()
+    private var dataSource: UICollectionViewDiffableDataSource<Int, Photo>!
     
     // MARK: - UI
     
@@ -61,6 +62,18 @@ final class PhotoSearchViewController: BaseViewController {
         
         viewModel.navigationTitle
             .bind(to: self.rx.title)
+            .disposed(by: disposeBag)
+        
+        viewModel.photos
+            .withUnretained(self)
+            .bind { vc, photos in
+                var snapshot = vc.dataSource.snapshot()
+                if snapshot.sectionIdentifiers.isEmpty {
+                    snapshot.appendSections([0])
+                }
+                snapshot.appendItems(photos)
+                vc.dataSource.apply(snapshot, animatingDifferences: true)
+            }
             .disposed(by: disposeBag)
         
         searchBar.rx.text.orEmpty
@@ -120,7 +133,7 @@ extension PhotoSearchViewController {
             cell.backgroundColor = .systemGray5
         }
         
-        viewModel.dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
             cell.backgroundImageView.kf.indicatorType = .activity
             cell.backgroundImageView.kf.setImage(with: item.imageURL)
