@@ -39,6 +39,7 @@
 		BD10138A290A72EF00C60279 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD101389290A72EF00C60279 /* Photo.swift */; };
 		BD101398290B7E0C00C60279 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD101397290B7E0C00C60279 /* Kingfisher */; };
 		BD6527752910187400603259 /* PhotoMainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6527742910187400603259 /* PhotoMainSection.swift */; };
+		BD89B8C929110E5C007C804F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89B8C829110E5C007C804F /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		BD101386290A6C3400C60279 /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
 		BD101389290A72EF00C60279 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BD6527742910187400603259 /* PhotoMainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMainSection.swift; sourceTree = "<group>"; };
+		BD89B8C829110E5C007C804F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				BD101382290A608200C60279 /* BaseViewController.swift */,
+				BD89B8C829110E5C007C804F /* ViewModelType.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				BD0A35F0290CC9F3003E6174 /* PhotoListRequestDTO.swift in Sources */,
 				BD0A3603290D1617003E6174 /* Secrets.swift in Sources */,
 				BD0A35D4290C0E8C003E6174 /* PhotoSearchRequestDTO.swift in Sources */,
+				BD89B8C929110E5C007C804F /* ViewModelType.swift in Sources */,
 				BD10137D290A45D700C60279 /* PhotoSearchViewModel.swift in Sources */,
 				BD101383290A608200C60279 /* BaseViewController.swift in Sources */,
 				BD0A35BA290C00E6003E6174 /* NetworkError.swift in Sources */,
