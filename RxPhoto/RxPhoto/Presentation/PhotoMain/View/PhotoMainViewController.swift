@@ -7,11 +7,13 @@
 
 import UIKit
 
+import RxSwift
 import RxCocoa
+import Kingfisher
 
 final class PhotoMainViewController: BaseViewController {
     
-    private let viewModel: PhotoMainViewModel = PhotoMainViewModelImpl()
+    private let viewModel = PhotoMainViewModelImpl()
     
     private let searchBarButtonItem = UIBarButtonItem(systemItem: .search)
     private lazy var collectionView = UICollectionView(
@@ -44,30 +46,22 @@ final class PhotoMainViewController: BaseViewController {
     }
     
     override func bind() {
-        // fetch 해온 데이터만 Relay에 다시 넣는 것이 맞을까?
-        // subscribe 부분에서 collectionView 세팅해주면 안되는건가?
-        viewModel.fetchPhotos()
-            .subscribe { photos in
-                self.viewModel.photos.accept(photos)
-            } onFailure: { error in
-                print(error)
-            }
-            .disposed(by: disposeBag)
+        let input = PhotoMainViewModelImpl.Input(searchButtonTap: searchBarButtonItem.rx.tap)
+        let output = viewModel.transform(input: input)
         
-        viewModel.navigationTitle
-            .asDriver()
+        output.navigationTitle
             .drive(self.rx.title)
             .disposed(by: disposeBag)
         
-        searchBarButtonItem.rx.tap
+        output.searchButtonTap
             .withUnretained(self)
             .bind { vc, _ in
                 vc.navigateToPhotoSearch()
             }
             .disposed(by: disposeBag)
         
-        viewModel.photos
-            .asDriver()
+        output.photos
+            .asDriver(onErrorJustReturn: [])
             .drive(collectionView.rx.items(cellIdentifier: "PhotoItemCell", cellType: PhotoItemCell.self)) { row, element, cell in
                 cell.backgroundImageView.kf.indicatorType = .activity
                 cell.backgroundImageView.kf.setImage(with: element.imageURL)

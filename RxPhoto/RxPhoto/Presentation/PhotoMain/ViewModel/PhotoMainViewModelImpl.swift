@@ -10,20 +10,39 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol PhotoMainViewModel {
-    var navigationTitle: BehaviorRelay<String> { get }
-    var photos: BehaviorRelay<[Photo]> { get }
+final class PhotoMainViewModelImpl: ViewModelType {
     
-    func fetchPhotos() -> Single<[Photo]>
-}
-
-final class PhotoMainViewModelImpl: PhotoMainViewModel {
-
-    var navigationTitle = BehaviorRelay(value: "Explore")
-    var photos = BehaviorRelay<[Photo]>(value: [])
-
+    private var disposeBag = DisposeBag()
     private var currentPage = 0
     private var perPage = 10
+    
+    struct Input {
+        let searchButtonTap: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let searchButtonTap: ControlEvent<Void>
+        
+        let navigationTitle: Driver<String>
+        let photos: Driver<[Photo]>
+    }
+    
+    func transform(input: Input) -> Output {
+        let navigationTitle = BehaviorRelay(value: "Explore").asDriver()
+        let photos = PublishSubject<[Photo]>()
+        
+        fetchPhotos()
+            .subscribe { value in
+                photos.onNext(value)
+            } onFailure: { error in
+                photos.onError(error)
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(searchButtonTap: input.searchButtonTap,
+                      navigationTitle: navigationTitle,
+                      photos: photos.asDriver(onErrorJustReturn: []))
+    }
 
     func fetchPhotos() -> Single<[Photo]> {
         return Single<[Photo]>.create { observer in
@@ -33,7 +52,6 @@ final class PhotoMainViewModelImpl: PhotoMainViewModel {
                 switch result {
                 case .success(let data):
                     let photos = data.map { $0.toDomain() }
-                    self.photos.accept(photos)
                     observer(.success(photos))
             
                 case .failure(let error):
